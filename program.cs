@@ -42,6 +42,7 @@ namespace donationCenter {
           if(userAge < 18)
           {
             Console.WriteLine("You must be at least 18 to donate");
+            break;
           }
           else if(userAge >= 18)
           {
@@ -59,7 +60,13 @@ namespace donationCenter {
               
               if(donationAmount > 0)
               {
-                
+                Console.WriteLine("Thank you! We greatly appreciate your donation");
+                donations = donations + donationAmount;
+              }
+              else if(donationAmount <= 0)
+              {
+                Console.WriteLine("You did not enter an amount!");
+                continue;
               }
             }
           }
@@ -87,6 +94,7 @@ namespace donationCenter {
           if(privateDonationAge < 18)
           {
             Console.WriteLine("You must be at least 18 to donate");
+            break;
           }
           else if(privateDonationAge >= 18)
           {
@@ -99,6 +107,11 @@ namespace donationCenter {
             {
               Console.WriteLine("Awesome! We greatly appreciate your donation");
               donations = donations + privateDonationAmount
+            }
+            else if(privateDonationAmount <= 0)
+            {
+              Console.WriteLine("You did not enter an amount!")
+              continue;
             }
           }
         }
