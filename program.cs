@@ -60,6 +60,7 @@ namespace donationCenter {
               
               if(donationAmount > 0)
               {
+                Thread.Sleep(1777);
                 Console.WriteLine("Thank you! We greatly appreciate your donation");
                 donations = donations + donationAmount;
               }
@@ -81,6 +82,7 @@ namespace donationCenter {
       }
       else if(newAccountOption == "No") 
       {
+        //User can make a private donation
         Console.Write("Would you like to make a private donation?");
         string privateDonation = Console.ReadLine();
         
